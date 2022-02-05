@@ -55,7 +55,21 @@ public WebElement satirYazdir(int satirNo){
     }
 
 
+    public void sutunYazdir(int sutun) {
+
+        // her bir satirdaki istenen sutun elemnetini yazdirabilmek icin
+        // once satir sayisini bilmeye ihtiyacim var
+
+        int satirSayisi= satirlarListesi.size();
+
+        for (int i = 1; i <= satirSayisi; i++) {
+            System.out.println(hucreWebelemntGetir(i,sutun));
+
+
+        }
 
 
 
+
+    }
 }

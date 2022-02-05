@@ -1,16 +1,17 @@
 package tests.day19;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 import pages.HMCWebTablePage;
 import pages.HotelMyCampPage;
+import utilities.Driver;
 
 public class C01_WebtableDinamikLocate {
 
     //3 test ()'u olusturalim
 
-
-    //3.() sutun numarasi verdigimde bana tum sutunu yazdirsin
     HMCWebTablePage hmcWebTablePage=new HMCWebTablePage();
     HotelMyCampPage hotelMyCampPage;
 
@@ -49,6 +50,22 @@ public class C01_WebtableDinamikLocate {
 }
 
 
+    @Test
+    public void sutunYazdir(){
+
+        hotelMyCampPage =new HotelMyCampPage();
+        hotelMyCampPage.girisYap();
+        //3.() sutun numarasi verdigimde bana tum sutunu yazdirsin
+
+        hmcWebTablePage = new HMCWebTablePage();
+
+        Select select=new Select(Driver.getDriver().findElement(By.xpath("(//select[@name='datatable_ajax_length'])[1]")));
+        select.selectByVisibleText("20");
+        hmcWebTablePage.sutunYazdir(4);
+
+
+
+    }
 
 
 
