@@ -57,8 +57,8 @@ public class ReusableMethods {
             // ikinci adim tablodaki hucreleri Map'e uygun hale donusturmek
             key=workbook.getSheet(sayfaAdi).getRow(i).getCell(0).toString();
             value=workbook.getSheet(sayfaAdi).getRow(i).getCell(1).toString()+
-                    ", " + workbook.getSheet(sayfaAdi).getRow(i).getCell(1).toString()+
-                    ", " + workbook.getSheet(sayfaAdi).getRow(i).getCell(1).toString();
+                    ", " + workbook.getSheet(sayfaAdi).getRow(i).getCell(2).toString()+
+                    ", " + workbook.getSheet(sayfaAdi).getRow(i).getCell(3).toString();
 
             // ucuncu adim key-value haline getirdigimiz satirlari Map'e eklemek
             excelMap.put(key,value);
