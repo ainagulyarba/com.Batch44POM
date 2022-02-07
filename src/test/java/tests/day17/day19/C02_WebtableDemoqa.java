@@ -27,6 +27,7 @@ public class C02_WebtableDemoqa {
 
         //  4. Tablodaki tum datalari yazdirin
         System.out.println( " Tum body : "+demoqaPage.tumBodyElementi.getText());
+
         //  5. Tabloda kac cell (data) oldugunu yazdirin
         System.out.println("Tablodaki data sayisi :"+demoqaPage.tumDataWebElementListesi.size());
 

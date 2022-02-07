@@ -25,7 +25,7 @@ public class C01_WebtableDinamikLocate {
         //7.satir yazdir    //tbody//tr[7]
 
         hmcWebTablePage = new HMCWebTablePage();
-        WebElement ucuncuSatirElementi=hmcWebTablePage.satirYazdir(3);
+        WebElement ucuncuSatirElementi=hmcWebTablePage.satirGetir(3);
         System.out.println(ucuncuSatirElementi.getText());
 
 
@@ -42,9 +42,9 @@ public class C01_WebtableDinamikLocate {
     //2.satirin 4.datasi    //tbody//tr[2]//td[4]
     //4.satirin 5.datasi       //tbody//tr[4]//td[5]
 
-    hmcWebTablePage.hucreWebelemntGetir(3,5);
+    hmcWebTablePage.hucreWebelementGetir(3,5);
 
-    System.out.println("girdiginiz hucredeki element : "+ hmcWebTablePage.hucreWebelemntGetir(3,5));
+    System.out.println("girdiginiz hucredeki element : "+ hmcWebTablePage.hucreWebelementGetir(3,5));
 
 
 }
@@ -58,9 +58,6 @@ public class C01_WebtableDinamikLocate {
         //3.() sutun numarasi verdigimde bana tum sutunu yazdirsin
 
         hmcWebTablePage = new HMCWebTablePage();
-
-        Select select=new Select(Driver.getDriver().findElement(By.xpath("(//select[@name='datatable_ajax_length'])[1]")));
-        select.selectByVisibleText("20");
         hmcWebTablePage.sutunYazdir(4);
 
 
