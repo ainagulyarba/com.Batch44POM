@@ -16,7 +16,7 @@ public class HMCWebTablePage {
 
     }
 
-    @FindBy(xpath = "//theader//tr[1]//th")
+    @FindBy(xpath = "//thead//tr[1]//th")
     public List<WebElement> headerBirinciSatirDatalar;
 
     @FindBy(xpath = "//tbody")
@@ -29,7 +29,7 @@ public class HMCWebTablePage {
     public List<WebElement> satirlarListesi;
 
 
-public WebElement satirYazdir(int satirNo){
+public WebElement satirGetir(int satirNo){
 
     //2.satiri yazdir   //tbody//tr[2]
     //7.satir yazdir    //tbody//tr[7]
@@ -43,7 +43,7 @@ public WebElement satirYazdir(int satirNo){
 }
 
 
-    public String hucreWebelemntGetir(int satir, int sutun) {
+    public String hucreWebelementGetir(int satir, int sutun) {
         //2.satirin 4.datasi    //tbody//tr[2]//td[4]
         //4.satirin 5.datasi       //tbody//tr[4]//td[5]
         String hucreDinamikXpath="//tbody//tr["+ satir  +"]//td["+ sutun  +"]";
@@ -63,7 +63,7 @@ public WebElement satirYazdir(int satirNo){
         int satirSayisi= satirlarListesi.size();
 
         for (int i = 1; i <= satirSayisi; i++) {
-            System.out.println(hucreWebelemntGetir(i,sutun));
+            System.out.println(hucreWebelementGetir(i,sutun));
 
 
         }
