@@ -9,7 +9,7 @@ import utilities.Driver;
 public class C04_HotelMyCampPositiveLogin {
 
 
-    @Test
+    @Test(groups = {"miniRegression", "smoke"})
     public void positiveLoginTesti(){
 
         // 1 ) Bir Class olustur : PositiveTest

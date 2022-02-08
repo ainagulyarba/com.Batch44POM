@@ -24,7 +24,7 @@ public class C01_DriverIlkTest {
         //Biz Driver class'dan getDriver'i ilk calistirdigimizda new atamasi olsun
         //sonraki calismalarda atama olmasin istiyoruz
         // bunun icin driver=new ChromeDriver(); satiri bir if blogu icine alacagiz
-        Driver.closeDriver();
+       // Driver.closeDriver();
 
 
     }
@@ -39,7 +39,7 @@ public class C01_DriverIlkTest {
     String actualUrl=Driver.getDriver().getCurrentUrl();
     Assert.assertTrue(actualUrl.contains("bestbuy"));
 
-    Driver.closeDriver();
+   // Driver.closeDriver();
 
 
 

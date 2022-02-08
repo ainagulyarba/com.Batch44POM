@@ -1,4 +1,4 @@
-package tests.day17.day19;
+package tests.day19;
 
 import org.testng.annotations.Test;
 import pages.DemoqaPage;
@@ -9,7 +9,7 @@ public class C02_WebtableDemoqa {
 
 //    Bir Class olusturun D19_WebtablesHomework
 
-    @Test
+    @Test(groups = {"smoke", "regression"})
     public void demoqaTest(){
 
         //  1. “https://demoqa.com/webtables” sayfasina gidin
