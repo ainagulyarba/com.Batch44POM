@@ -3,8 +3,7 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utilities.ConfigReader;
-import utilities.Driver;
+import utilities.*;
 
 public class HotelMyCampPage {
 
@@ -35,7 +34,7 @@ public class HotelMyCampPage {
     public WebElement girisYapilamadiYaziElementi;
 
     @FindBy(xpath = "//span[text()='Hotel Management']")
-public WebElement hotelManagementLinki;
+    public WebElement hotelManagementLinki;
 
     @FindBy(xpath = "//a[@href='/admin/HotelAdmin']")
     public WebElement hotelListLinki;

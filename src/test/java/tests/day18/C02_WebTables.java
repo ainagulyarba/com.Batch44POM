@@ -3,16 +3,17 @@ package tests.day18;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-import pages.HMCWebTablePage;
 import pages.HotelMyCampPage;
-import utilities.Driver;
+import pages.HMCWebTablePage;
+
 
 import java.util.List;
 
 public class C02_WebTables {
 
-    HotelMyCampPage hotelMyCampPage;
-    HMCWebTablePage hmcWebTablePage;
+
+   HotelMyCampPage hotelMyCampPage;
+   HMCWebTablePage hmcWebTablePage;
 
     @Test
     public void login(){

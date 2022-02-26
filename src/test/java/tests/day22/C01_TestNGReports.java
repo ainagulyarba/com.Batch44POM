@@ -24,7 +24,7 @@ public class C01_TestNGReports extends TestBaseRapor {
         String expectedTitle="New Window";
         String actualTitle=Driver.getDriver().getTitle();
         Assert.assertEquals(actualTitle,expectedTitle);
-        extentTest.pass("tirle'nin beklenen deger ile ayni oldugu test edildi");
+        extentTest.pass("title'nin beklenen deger ile ayni oldugu test edildi");
 
 
 

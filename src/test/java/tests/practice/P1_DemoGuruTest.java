@@ -1,6 +1,5 @@
 package tests.practice;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -9,10 +8,9 @@ import pages.P1_DemoGuruPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
-
-public class P1_DemoGuruTest {
-
-       /*
+import utilities.TestBaseRapor;
+public class P1_DemoGuruTest extends TestBaseRapor {
+    /*
     http://demo.guru99.com/test/drag_drop.html url e git
     DEBIT SIDE da Account bolumune BANK butonunu surukle ve birak
     CREDIT SIDE da Account bolumune SALES butonunu surukle ve birak
@@ -21,26 +19,24 @@ public class P1_DemoGuruTest {
     Perfect butonun goruntulendigini dogrulayin
      */
     @Test
-    public void test() throws InterruptedException {
+    public void test() {
+        extentTest = extentReports.createTest("demoGuru Test", "drag-drop Test");
         Driver.getDriver().get(ConfigReader.getProperty("demoGuruUrl"));
-        Thread.sleep(2000);
-        Driver.getDriver().findElement(By.xpath("//span[text()='Tout accepter']")).click();
+        extentTest.info("istenilen url e gidildi");
         Actions actions = new Actions(Driver.getDriver());
         P1_DemoGuruPage p1_demoGuruPage = new P1_DemoGuruPage();
         actions.dragAndDrop(p1_demoGuruPage.bankButonu, p1_demoGuruPage.debitsideAccount).
-                dragAndDrop(p1_demoGuruPage.salesButonu,p1_demoGuruPage.creditSideAccount).
-                dragAndDrop(p1_demoGuruPage.firstnum5000Butonu,p1_demoGuruPage.debitsideAmount).
-                dragAndDrop(p1_demoGuruPage.secondnum5000Butonu,p1_demoGuruPage.creditSideAmount).
+                dragAndDrop(p1_demoGuruPage.salesButonu, p1_demoGuruPage.creditSideAccount).
+                dragAndDrop(p1_demoGuruPage.firstnum5000Butonu, p1_demoGuruPage.debitsideAmount).
+                dragAndDrop(p1_demoGuruPage.secondnum5000Butonu, p1_demoGuruPage.creditSideAmount).
                 sendKeys(Keys.PAGE_DOWN).perform();
+        extentTest.info("webElementler istenilen yere gonderildi");
         Assert.assertTrue(p1_demoGuruPage.perfectYazisi.isDisplayed());
+        extentTest.pass("Perfect yazisi goruldu...");
         ReusableMethods.waitFor(4);
     }
 
 }
-
-
-
-
 
 
 

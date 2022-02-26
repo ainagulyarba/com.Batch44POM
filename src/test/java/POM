@@ -12,7 +12,7 @@
     Temel Class'lar:
     1- pages: lacate'ler ve faydali reusable method'lar
     2- Driver:
-        - Static methodlarla ulasilacak sekilde organiza ettik,
+        - Static methodlarla ulasilacak sekilde organize ettik,
         - Tek bir browser'a bagimli olmaktan kurtulduk
         - getDriver() ve closeDriver() methodlari sayesinde istedigimiz yerde driver acmak veya kapatmak elimizde
         - Driver class'ini farkli objeler olusturmamak icin Singleton pattern'e uygun olarak duzenledik.

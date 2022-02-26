@@ -17,6 +17,7 @@ public class Driver {
 
   private static WebDriver driver;
 
+
     public static WebDriver getDriver(){
 
         if(driver==null){ // bu if sayesinde kod calisirken bir kere new keyword ile driver olusturulacak

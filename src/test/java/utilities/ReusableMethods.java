@@ -12,8 +12,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import java.util.function.Function;
+
     public class ReusableMethods {
+
         public static String getScreenshot(String name) throws IOException {
+            
             // naming the screenshot with the current date to avoid duplication
             String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
             // TakesScreenshot is an interface of selenium that takes the screenshot
